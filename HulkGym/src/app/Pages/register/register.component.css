@@ -1,0 +1,62 @@
+.container {
+    background: rgba(72, 255, 0, 0.5);
+    width: max-content;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+}
+
+.centerForm {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    width: max-content;
+    padding: 10px;
+}
+
+label {
+    color: aliceblue;
+}
+
+.help-block {
+    color: red;
+}
+
+span {
+    color: aliceblue;
+}
+
+button {
+    width: 100%;
+}
+
+p {
+    width: 350px;
+    color: aliceblue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+h2 {
+    text-align: center;
+    color: aliceblue;
+}
+
+h2:hover {
+    transform: scale(1.5);
+}
+
+input.ng-invalid.ng-touched {
+    border: 3px solid red;
+}

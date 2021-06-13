@@ -1,0 +1,45 @@
+.background {
+    padding: 50px;
+    background-image: url('../../../assets/Pictures/hulk.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    width: min-content;
+}
+
+.HomeBackground {
+    background-color: rgb(19, 19, 19);
+    height: max-content;
+}
+
+h1 {
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+p {
+    width: 400px;
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+.input-group {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.input-group-content {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+}
+
+.input-group-append button {
+    margin-left: 5px;
+    width: max-content;
+}

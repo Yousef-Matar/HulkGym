@@ -1,0 +1,46 @@
+.container-fluid{
+    margin: 0px;
+    padding-left: 0px;
+    width: fit-content;
+}
+.nav-item a {
+    color: white;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 0px;;
+}
+.nav-item a:hover{
+    color: lightgreen;
+}
+.nav-link{
+    width:max-content;
+}
+img{
+    width:50px; 
+    height:40px;
+}
+.logo{
+    position:relative;
+    display: block;
+    left: 7%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.right{
+    margin-left: auto;
+}
+i{
+    font-size:24px; 
+    color: white;
+}
+i:hover{
+    color: lightgreen;
+}
+.language{
+    padding: 0;
+}
+.dropdown-toggle::after{
+    margin-left: 0;
+    border: 0;
+}

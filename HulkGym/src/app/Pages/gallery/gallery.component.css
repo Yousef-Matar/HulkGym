@@ -1,0 +1,29 @@
+.ImgBackGround{
+    background-color: black;
+}
+img {
+    width: 100%;
+}
+
+.imgcol {
+    width: 100%;
+    padding: 0;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../../../assets/Pictures/Right-GreenArrow.png');
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../../../assets/Pictures/Left-GreenArrow.png');
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-indicators li {
+    background: blue;
+    border: 0;
+    height: 5px;
+}

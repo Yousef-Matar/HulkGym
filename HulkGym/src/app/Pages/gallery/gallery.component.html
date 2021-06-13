@@ -1,0 +1,13 @@
+<div class="ImgBackGround">
+  <div class="section" id="carousel">
+      <div class="w-100" >
+        <div class="imgcol">
+          <ngb-carousel> 
+            <ng-template ngbSlide *ngFor ="let Photo of Images">
+              <img draggable="false" class="d-block" src="{{Photo}}" alt="First slide">
+            </ng-template>
+          </ngb-carousel>
+        </div>
+    </div>
+  </div>
+  </div>

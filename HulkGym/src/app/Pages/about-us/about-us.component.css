@@ -1,0 +1,23 @@
+.container {
+    border-color: silver;
+    border: 1px;
+    border-style: solid;
+    color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(23, 118, 206, 0.3);
+    border-radius: 0.3rem;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+a{
+    float: right; 
+    color: blue;
+}
+a:hover{
+    color: lightgreen;
+}

@@ -1,0 +1,168 @@
+<div class="container">
+  <h2>{{ "register.Content.Title" | translate }}</h2>
+  <div class="centerForm">
+    <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+      <div id="user-data">
+        <div class="form-group">
+          <label for="username">{{
+            "register.Content.UserName.Title" | translate
+          }}</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="{{
+              'register.Content.UserName.PlaceHolder' | translate
+            }}"
+            formControlName="username"
+            class="form-control"
+          />
+          <div
+            class="help-block"
+            *ngIf="
+              RegisterForm.get('username')!.errors?.required &&
+              RegisterForm.get('username')!.touched
+            "
+          >
+            {{ "errors.Register.EmptyUserName" | translate }}
+          </div>
+          <div
+            class="help-block"
+            *ngIf="RegisterForm.get('username')!.errors?.minlength"
+          >
+            {{ "errors.Register.UserNameLength" | translate }}
+          </div>
+          <div
+            class="help-block"
+            *ngIf="RegisterForm.get('username')!.errors?.UsernameTaken"
+          >
+            {{ "errors.Register.TakenUserName" | translate }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">{{
+            "register.Content.Email.Title" | translate
+          }}</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="{{ 'register.Content.Email.PlaceHolder' | translate }}"
+            formControlName="email"
+            class="form-control"
+          />
+          <div
+            class="help-block"
+            *ngIf="
+              RegisterForm.get('email')!.errors?.required &&
+              RegisterForm.get('email')!.touched
+            "
+          >
+            {{ "errors.Register.EmptyEmail" | translate }}
+          </div>
+          <div
+            class="help-block"
+            *ngIf="RegisterForm.get('email')!.errors?.EmailTaken"
+          >
+            {{ "errors.Register.TakenEmail" | translate }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Password">{{
+            "register.Content.Password.Title" | translate
+          }}</label>
+          <input
+            type="password"
+            id="Password"
+            placeholder="{{
+              'register.Content.Password.PlaceHolder' | translate
+            }}"
+            formControlName="password"
+            class="form-control"
+          />
+          <div
+            class="help-block"
+            *ngIf="
+              !RegisterForm.get('password')!.valid &&
+              RegisterForm.get('password')!.touched
+            "
+          >
+            {{ "errors.Register.PasswordLength" | translate }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ConfirmPassword">{{
+            "register.Content.ConfirmPassword.Title" | translate
+          }}</label>
+          <input
+            type="password"
+            id="ConfirmPassword"
+            placeholder="{{
+              'register.Content.ConfirmPassword.PlaceHolder' | translate
+            }}"
+            formControlName="Confirmpassword"
+            class="form-control"
+          />
+          <div
+            class="help-block"
+            *ngIf="
+              !RegisterForm.get('Confirmpassword')!.valid &&
+              RegisterForm.get('Confirmpassword')!.touched
+            "
+          >
+            {{ "errors.Register.Passwordsnotmatching" | translate }}
+          </div>
+        </div>
+        <div>
+          <p>{{ "register.Content.Gender.Title" | translate }}</p>
+          <div class="radio" *ngFor="let g of 'register.Content.Gender.Genders' | translate ">
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                formControlName="gender"
+                [value]="g"
+              />
+              <span> {{ g }}</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group form-check">
+          <input
+            type="checkbox"
+            formControlName="Ageover18"
+            id="Ageover18"
+            class="form-check-input"
+            formControlName="Ageover18"
+          />
+          <label for="Ageover18" class="form-check-label">
+            {{ "register.Content.AgeConfirmation.Title" | translate }}</label
+          >
+        </div>
+        <div class="help-block">
+          {{ "errors.Register.Requirements" | translate }}
+        </div>
+      </div>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!RegisterForm.valid"
+      >
+        {{ "register.Content.ButtonContent" | translate }}
+      </button>
+      <p>
+        {{ "register.Content.Confirmation.0" | translate }}
+        <a routerLink="/TermsandConditions">{{
+          "register.Content.Confirmation.1" | translate
+        }}</a>
+        {{ "register.Content.Confirmation.2" | translate }}
+        <a routerLink="/TermsandConditions">{{
+          "register.Content.Confirmation.3" | translate
+        }}</a>
+        {{ "register.Content.Confirmation.4" | translate }}
+        <a routerLink="/TermsandConditions">{{
+          "register.Content.Confirmation.5" | translate
+        }}</a>
+        {{ "register.Content.Confirmation.6" | translate }}
+      </p>
+    </form>
+  </div>
+</div>
